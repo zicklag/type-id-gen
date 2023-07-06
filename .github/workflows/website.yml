@@ -18,6 +18,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - name: 🧰 Install WASM Target
+        uses: actions-rs/toolchain@v1
+        with:
+          target: wasm32-unknown-unknown
+
       - name: Install Trunk
         uses: jetli/trunk-action@v0.4.0
         with:
@@ -25,7 +30,7 @@ jobs:
           version: 'latest'
 
       - name: Build
-        run: trunk build --release
+        run: trunk build --release --public-url type-id-gen
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
