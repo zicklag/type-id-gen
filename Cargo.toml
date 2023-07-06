@@ -1,0 +1,17 @@
+[package]
+name = "counter"
+version = "0.1.1"
+resolver = "2"
+authors = ["Denis Kolodin <deniskolodin@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+gloo = "0.8"
+js-sys = "0.3"
+yew = { version = "0.20", features = ["csr"] }
+wasm-bindgen = "0.2"
+type-safe-id = "0.2"
+web-sys = { version = "0.3", features = ["HtmlInputElement"] }
+getrandom = { version = "0.2", features = ["js"] }
+uuid = { version = "1.4.0", features = ["v7", "js"] }
