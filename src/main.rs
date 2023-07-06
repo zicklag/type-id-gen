@@ -95,7 +95,7 @@ impl Component for App {
                 </p>
 
                 <button class="generate" onclick={ctx.link().callback(|_| Msg::Generate)}>
-                { "Generate" }
+                { "Regenerate" }
                 </button>
             </div>
         }
